@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="47c605dd5f8547e4ba1c2b5ba7700206" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="DDNA_DBModel.Admin" Width="1.5" PointX="3" PointY="9.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DDNA_DBModel.Class" Width="1.5" PointX="3.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DDNA_DBModel.Daily_Register" Width="1.5" PointX="8.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DDNA_DBModel.Mentor_Eval" Width="1.5" PointX="5.25" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DDNA_DBModel.Mentor" Width="1.5" PointX="3" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DDNA_DBModel.Role" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DDNA_DBModel.Student_Eval" Width="1.5" PointX="8.25" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DDNA_DBModel.Student" Width="1.5" PointX="6" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DDNA_DBModel.TBL_Weekly" Width="1.5" PointX="8.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DDNA_DBModel.vw_LoginInfo" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="DDNA_DBModel.FK__Admin__RoleID__1B0907CE" ManuallyRouted="false" />
+        <AssociationConnector Association="DDNA_DBModel.FK__Students__ClassI__15502E78" ManuallyRouted="false" />
+        <AssociationConnector Association="DDNA_DBModel.FK__Daily_Reg__Stude__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="DDNA_DBModel.FK__Mentor_Ev__Mento__1ED998B2" ManuallyRouted="false" />
+        <AssociationConnector Association="DDNA_DBModel.FK__Mentor_Ev__Stude__1DE57479" ManuallyRouted="false" />
+        <AssociationConnector Association="DDNA_DBModel.FK__Mentors__RoleID__182C9B23" ManuallyRouted="false" />
+        <AssociationConnector Association="DDNA_DBModel.FK__Student_E__Mento__21B6055D" ManuallyRouted="false" />
+        <AssociationConnector Association="DDNA_DBModel.FK__TBL_Weekl__Mento__25869641" ManuallyRouted="false" />
+        <AssociationConnector Association="DDNA_DBModel.FK__Students__RoleID__145C0A3F" ManuallyRouted="false" />
+        <AssociationConnector Association="DDNA_DBModel.FK__Student_E__Stude__22AA2996" ManuallyRouted="false" />
+        <AssociationConnector Association="DDNA_DBModel.FK__TBL_Weekl__Stude__267ABA7A" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

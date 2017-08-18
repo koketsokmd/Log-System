@@ -1,0 +1,175 @@
+body {
+  margin:0px;
+  padding:0px;
+
+}
+.container {
+  margin: 0 auto;
+  max-width: 788px;
+}
+.panel {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  width: 220px;
+  height: 160px;
+  margin: 20px;
+  color: #fff;
+  overflow: hidden;
+  border-radius: 3px;
+}
+.panel p {
+  position: relative;
+  display: block;
+  padding: 12px 12px 12px 12px;
+  color: #fff;
+  text-decoration: none;
+  line-height: 160px;
+}
+
+.panel:after {
+  position: absolute;
+  z-index: 1;
+  transition: all .5s;
+  line-height: normal;
+}
+.panel.First {
+  background-color: #2a398c;
+}
+.panel.First:after {
+  content:url(../icons/user.png);
+  font-size: 200px;
+  color: #a5980d;
+  top: -5px;
+  right: 10px;
+}
+.panel.First:hover:after {
+  top: 8px;
+}
+.panel.Second {
+  background-color: #fdb930;
+}
+.panel.Second:after {
+  content:url(../icons/logbooks.png);
+  font-size: 200px;
+  top: 3px;
+  right: 10px;
+}
+.panel.Second:hover:after {
+  top: 8px;
+}
+.panel.third {
+  background-color: #2a398c;
+}
+.panel.third:after {
+  content:url(../icons/Eval.png);
+  font-size: 200px;
+  top: 3px;
+  right: 10px;
+}
+.panel.third:hover:after {
+  top: 8px;
+}
+.panel.Fourth {
+  background-color: #fdb930;
+}
+.panel.Fourth:after {
+  content:url(../icons/Eval.png);
+  font-size: 200px;
+  color: #ec0326;
+  top: 3px;
+  right: 10px;
+}
+.panel.Fourth:hover:after {
+  top: 7px;
+}
+
+.panel.fifth {
+  background-color: #2a398c;
+}
+.panel.fifth:after {
+  content:url(../icons/reg.png);
+  font-size: 200px;
+  top: 3px;
+  right: 10px;
+}
+.panel.fifth:hover:after {
+  top: 8px;
+}
+
+.panel:hover:after {
+  transition: all .5s;
+}
+
+.longbar
+{
+	background:#2a398c;
+	width:100%;
+	height:40px;
+	padding:2px 20px 5px;
+}
+
+.heading
+{
+	float:left;
+	color:#FFFFFF;
+	font-weight:bold;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	
+}
+
+.savebtn
+{
+	background:#2a398c !important;	
+}
+
+.formheading
+{
+	text-align:center;
+	color:#FFFFFF;
+	font-weight:bold;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	
+}
+
+.loggedin
+{
+	float:right;
+	color:#FFFFFF;
+	margin-right:40px;
+}
+
+.footer
+{
+	background:#2a398c;
+	width:100%;
+	height:40px;
+	padding:2px 6px 5px;
+	text-align:center;
+	color:#FFFFFF;
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+		position:relative;
+		text-align:center;
+		overflow:visible !important;
+    }
+	
+	.loggedin
+{
+	float:right;
+	color:#FFFFFF;
+	text-align:center;
+}
+	
+}
+
+.Colordefault{
+    color:#fff !important;
+}
+
+btndefault{
+    background:#2a398c !important;
+}
+

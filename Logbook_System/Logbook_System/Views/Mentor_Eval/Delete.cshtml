@@ -1,0 +1,185 @@
+﻿@model Logbook_System.DB.Mentor_Eval
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Mentor_Eval</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Relevance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Relevance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Knowledge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Knowledge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Communication)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Communication)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Teamwork)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Teamwork)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProblemSolving)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProblemSolving)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FinalJudgement)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FinalJudgement)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Punctuality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Punctuality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Manners)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Manners)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Instructions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Instructions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Enthusiasm)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Enthusiasm)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Workload)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Workload)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adaptibility)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adaptibility)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.JobKnowledge)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.JobKnowledge)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PeerTeamwork)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PeerTeamwork)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Assistance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Assistance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LeanerSign)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LeanerSign)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MentorSign)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MentorSign)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mentor.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mentor.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student.Username)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

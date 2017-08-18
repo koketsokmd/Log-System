@@ -1,0 +1,107 @@
+﻿@model Logbook_System.DB.Student_Eval
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Student_Eval</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.WorkplaceExperience)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.WorkplaceExperience)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LearningProcess)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LearningProcess)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CommunicationSkills)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CommunicationSkills)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccomodationOfLearners)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccomodationOfLearners)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LearnerProblemSolving)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LearnerProblemSolving)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FinalJudgement)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FinalJudgement)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Comments)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comments)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LeanerSign)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LeanerSign)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MentorSign)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MentorSign)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mentor.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mentor.Username)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Student.Username)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Student.Username)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

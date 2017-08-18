@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DDNA_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Admin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="RoleID" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Classes">
+    <Key>
+      <PropertyRef Name="ClassID" />
+    </Key>
+    <Property Name="ClassID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Class" Type="varchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Daily_Register">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="StudentID" Type="varchar" MaxLength="13" />
+    <Property Name="Date" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mentor_Eval">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="StudentID" Type="varchar" MaxLength="13" />
+    <Property Name="MentorID" Type="varchar" MaxLength="13" />
+    <Property Name="Relevance" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="Knowledge" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="Communication" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="Teamwork" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="ProblemSolving" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="FinalJudgement" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="Punctuality" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="Manners" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="Instructions" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="Enthusiasm" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="Workload" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="Adaptibility" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="JobKnowledge" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="PeerTeamwork" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="Assistance" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="Comments" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="LeanerSign" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="MentorSign" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mentors">
+    <Key>
+      <PropertyRef Name="MentorID" />
+    </Key>
+    <Property Name="MentorID" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Surname" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="RoleID" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="Roles">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="RoleName" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Student_Eval">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="MentorID" Type="varchar" MaxLength="13" />
+    <Property Name="StudentID" Type="varchar" MaxLength="13" />
+    <Property Name="WorkplaceExperience" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="LearningProcess" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="CommunicationSkills" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="AccomodationOfLearners" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="LearnerProblemSolving" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="FinalJudgement" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="Comments" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="LeanerSign" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="MentorSign" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Students">
+    <Key>
+      <PropertyRef Name="StudentID" />
+    </Key>
+    <Property Name="StudentID" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="Surname" Type="varchar" MaxLength="40" Nullable="false" />
+    <Property Name="RoleID" Type="varchar" MaxLength="20" />
+    <Property Name="ClassID" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="TBL_Weekly">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MentorID" Type="varchar" MaxLength="13" />
+    <Property Name="StudentID" Type="varchar" MaxLength="13" />
+    <Property Name="CellPhone" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="LearnershipIntk" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Date" Type="date" Nullable="false" />
+    <Property Name="Task" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CompletedToSatisifaction" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="Time" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="ProblemsExperienced" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="GeneralComments" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LeanerSign" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="MentorSign" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'DDNA_DB.dbo.vw_LoginInfo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="vw_LoginInfo">
+    <Key>
+      <PropertyRef Name="UserID" />
+      <PropertyRef Name="Username" />
+      <PropertyRef Name="Password" />
+    </Key>
+    <Property Name="UserID" Type="int" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="RoleID" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <Association Name="FK__Admin__RoleID__1B0907CE">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+    <End Role="Admin" Type="Self.Admin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="Admin">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Daily_Reg__Stude__29572725">
+    <End Role="Students" Type="Self.Students" Multiplicity="0..1" />
+    <End Role="Daily_Register" Type="Self.Daily_Register" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="StudentID" />
+      </Principal>
+      <Dependent Role="Daily_Register">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Mentor_Ev__Mento__1ED998B2">
+    <End Role="Mentors" Type="Self.Mentors" Multiplicity="0..1" />
+    <End Role="Mentor_Eval" Type="Self.Mentor_Eval" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mentors">
+        <PropertyRef Name="MentorID" />
+      </Principal>
+      <Dependent Role="Mentor_Eval">
+        <PropertyRef Name="MentorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Mentor_Ev__Stude__1DE57479">
+    <End Role="Students" Type="Self.Students" Multiplicity="0..1" />
+    <End Role="Mentor_Eval" Type="Self.Mentor_Eval" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="StudentID" />
+      </Principal>
+      <Dependent Role="Mentor_Eval">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Mentors__RoleID__182C9B23">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+    <End Role="Mentors" Type="Self.Mentors" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="Mentors">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student_E__Mento__21B6055D">
+    <End Role="Mentors" Type="Self.Mentors" Multiplicity="0..1" />
+    <End Role="Student_Eval" Type="Self.Student_Eval" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mentors">
+        <PropertyRef Name="MentorID" />
+      </Principal>
+      <Dependent Role="Student_Eval">
+        <PropertyRef Name="MentorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Student_E__Stude__22AA2996">
+    <End Role="Students" Type="Self.Students" Multiplicity="0..1" />
+    <End Role="Student_Eval" Type="Self.Student_Eval" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="StudentID" />
+      </Principal>
+      <Dependent Role="Student_Eval">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Students__ClassI__15502E78">
+    <End Role="Classes" Type="Self.Classes" Multiplicity="0..1" />
+    <End Role="Students" Type="Self.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Classes">
+        <PropertyRef Name="ClassID" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="ClassID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Students__RoleID__145C0A3F">
+    <End Role="Roles" Type="Self.Roles" Multiplicity="0..1" />
+    <End Role="Students" Type="Self.Students" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Roles">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="Students">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TBL_Weekl__Mento__25869641">
+    <End Role="Mentors" Type="Self.Mentors" Multiplicity="0..1" />
+    <End Role="TBL_Weekly" Type="Self.TBL_Weekly" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Mentors">
+        <PropertyRef Name="MentorID" />
+      </Principal>
+      <Dependent Role="TBL_Weekly">
+        <PropertyRef Name="MentorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__TBL_Weekl__Stude__267ABA7A">
+    <End Role="Students" Type="Self.Students" Multiplicity="0..1" />
+    <End Role="TBL_Weekly" Type="Self.TBL_Weekly" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Students">
+        <PropertyRef Name="StudentID" />
+      </Principal>
+      <Dependent Role="TBL_Weekly">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="LoginWithUsernamePassword" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="dUsername" Type="varchar" Mode="In" />
+    <Parameter Name="dPassword" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="DDNA_DBModelStoreContainer">
+    <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Classes" EntityType="Self.Classes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Daily_Register" EntityType="Self.Daily_Register" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mentor_Eval" EntityType="Self.Mentor_Eval" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Mentors" EntityType="Self.Mentors" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Roles" EntityType="Self.Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student_Eval" EntityType="Self.Student_Eval" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Students" EntityType="Self.Students" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBL_Weekly" EntityType="Self.TBL_Weekly" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="vw_LoginInfo" EntityType="Self.vw_LoginInfo" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [vw_LoginInfo].[UserID] AS [UserID], 
+    [vw_LoginInfo].[Username] AS [Username], 
+    [vw_LoginInfo].[Password] AS [Password], 
+    [vw_LoginInfo].[RoleID] AS [RoleID]
+    FROM [dbo].[vw_LoginInfo] AS [vw_LoginInfo]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK__Admin__RoleID__1B0907CE" Association="Self.FK__Admin__RoleID__1B0907CE">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Admin" EntitySet="Admin" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Daily_Reg__Stude__29572725" Association="Self.FK__Daily_Reg__Stude__29572725">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="Daily_Register" EntitySet="Daily_Register" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Mentor_Ev__Mento__1ED998B2" Association="Self.FK__Mentor_Ev__Mento__1ED998B2">
+      <End Role="Mentors" EntitySet="Mentors" />
+      <End Role="Mentor_Eval" EntitySet="Mentor_Eval" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Mentor_Ev__Stude__1DE57479" Association="Self.FK__Mentor_Ev__Stude__1DE57479">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="Mentor_Eval" EntitySet="Mentor_Eval" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Mentors__RoleID__182C9B23" Association="Self.FK__Mentors__RoleID__182C9B23">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Mentors" EntitySet="Mentors" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student_E__Mento__21B6055D" Association="Self.FK__Student_E__Mento__21B6055D">
+      <End Role="Mentors" EntitySet="Mentors" />
+      <End Role="Student_Eval" EntitySet="Student_Eval" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Student_E__Stude__22AA2996" Association="Self.FK__Student_E__Stude__22AA2996">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="Student_Eval" EntitySet="Student_Eval" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Students__ClassI__15502E78" Association="Self.FK__Students__ClassI__15502E78">
+      <End Role="Classes" EntitySet="Classes" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Students__RoleID__145C0A3F" Association="Self.FK__Students__RoleID__145C0A3F">
+      <End Role="Roles" EntitySet="Roles" />
+      <End Role="Students" EntitySet="Students" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TBL_Weekl__Mento__25869641" Association="Self.FK__TBL_Weekl__Mento__25869641">
+      <End Role="Mentors" EntitySet="Mentors" />
+      <End Role="TBL_Weekly" EntitySet="TBL_Weekly" />
+    </AssociationSet>
+    <AssociationSet Name="FK__TBL_Weekl__Stude__267ABA7A" Association="Self.FK__TBL_Weekl__Stude__267ABA7A">
+      <End Role="Students" EntitySet="Students" />
+      <End Role="TBL_Weekly" EntitySet="TBL_Weekly" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

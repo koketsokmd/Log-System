@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/")Css/style.css">
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/")Css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="@Url.Content("~/Content/")Css/bootstrap.min.css">
+</head>
+<body>
+    <br />
+    <center><a href="#"><img src="@Url.Content("~/Content/")Images/registerlogo.png"></a></center>
+    <br>
+
+    <div class="longbar">
+        <div class="heading">
+            @*<p>Admin Dashboard</p>*@
+        </div>
+
+        <div class="loggedin">
+            @*<p>Welcome Admin Name</p>*@
+        </div>
+    </div>
+
+    <div>
+        @RenderBody()
+    </div>
+
+</body>
+</html>

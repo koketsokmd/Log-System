@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DDNA_DBModelStoreContainer" CdmEntityContainer="DDNA_DBEntities">
+    <EntitySetMapping Name="Admins">
+      <EntityTypeMapping TypeName="DDNA_DBModel.Admin">
+        <MappingFragment StoreEntitySet="Admin">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Classes">
+      <EntityTypeMapping TypeName="DDNA_DBModel.Class">
+        <MappingFragment StoreEntitySet="Classes">
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+          <ScalarProperty Name="Class1" ColumnName="Class" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Daily_Register">
+      <EntityTypeMapping TypeName="DDNA_DBModel.Daily_Register">
+        <MappingFragment StoreEntitySet="Daily_Register">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mentor_Eval">
+      <EntityTypeMapping TypeName="DDNA_DBModel.Mentor_Eval">
+        <MappingFragment StoreEntitySet="Mentor_Eval">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="MentorID" ColumnName="MentorID" />
+          <ScalarProperty Name="Relevance" ColumnName="Relevance" />
+          <ScalarProperty Name="Knowledge" ColumnName="Knowledge" />
+          <ScalarProperty Name="Communication" ColumnName="Communication" />
+          <ScalarProperty Name="Teamwork" ColumnName="Teamwork" />
+          <ScalarProperty Name="ProblemSolving" ColumnName="ProblemSolving" />
+          <ScalarProperty Name="FinalJudgement" ColumnName="FinalJudgement" />
+          <ScalarProperty Name="Punctuality" ColumnName="Punctuality" />
+          <ScalarProperty Name="Manners" ColumnName="Manners" />
+          <ScalarProperty Name="Instructions" ColumnName="Instructions" />
+          <ScalarProperty Name="Enthusiasm" ColumnName="Enthusiasm" />
+          <ScalarProperty Name="Workload" ColumnName="Workload" />
+          <ScalarProperty Name="Adaptibility" ColumnName="Adaptibility" />
+          <ScalarProperty Name="JobKnowledge" ColumnName="JobKnowledge" />
+          <ScalarProperty Name="PeerTeamwork" ColumnName="PeerTeamwork" />
+          <ScalarProperty Name="Assistance" ColumnName="Assistance" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="LeanerSign" ColumnName="LeanerSign" />
+          <ScalarProperty Name="MentorSign" ColumnName="MentorSign" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mentors">
+      <EntityTypeMapping TypeName="DDNA_DBModel.Mentor">
+        <MappingFragment StoreEntitySet="Mentors">
+          <ScalarProperty Name="MentorID" ColumnName="MentorID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Roles">
+      <EntityTypeMapping TypeName="DDNA_DBModel.Role">
+        <MappingFragment StoreEntitySet="Roles">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Student_Eval">
+      <EntityTypeMapping TypeName="DDNA_DBModel.Student_Eval">
+        <MappingFragment StoreEntitySet="Student_Eval">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MentorID" ColumnName="MentorID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="WorkplaceExperience" ColumnName="WorkplaceExperience" />
+          <ScalarProperty Name="LearningProcess" ColumnName="LearningProcess" />
+          <ScalarProperty Name="CommunicationSkills" ColumnName="CommunicationSkills" />
+          <ScalarProperty Name="AccomodationOfLearners" ColumnName="AccomodationOfLearners" />
+          <ScalarProperty Name="LearnerProblemSolving" ColumnName="LearnerProblemSolving" />
+          <ScalarProperty Name="FinalJudgement" ColumnName="FinalJudgement" />
+          <ScalarProperty Name="Comments" ColumnName="Comments" />
+          <ScalarProperty Name="LeanerSign" ColumnName="LeanerSign" />
+          <ScalarProperty Name="MentorSign" ColumnName="MentorSign" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Students">
+      <EntityTypeMapping TypeName="DDNA_DBModel.Student">
+        <MappingFragment StoreEntitySet="Students">
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="ClassID" ColumnName="ClassID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TBL_Weekly">
+      <EntityTypeMapping TypeName="DDNA_DBModel.TBL_Weekly">
+        <MappingFragment StoreEntitySet="TBL_Weekly">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="MentorID" ColumnName="MentorID" />
+          <ScalarProperty Name="StudentID" ColumnName="StudentID" />
+          <ScalarProperty Name="CellPhone" ColumnName="CellPhone" />
+          <ScalarProperty Name="LearnershipIntk" ColumnName="LearnershipIntk" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Task" ColumnName="Task" />
+          <ScalarProperty Name="CompletedToSatisifaction" ColumnName="CompletedToSatisifaction" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="ProblemsExperienced" ColumnName="ProblemsExperienced" />
+          <ScalarProperty Name="GeneralComments" ColumnName="GeneralComments" />
+          <ScalarProperty Name="LeanerSign" ColumnName="LeanerSign" />
+          <ScalarProperty Name="MentorSign" ColumnName="MentorSign" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vw_LoginInfo">
+      <EntityTypeMapping TypeName="DDNA_DBModel.vw_LoginInfo">
+        <MappingFragment StoreEntitySet="vw_LoginInfo">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="LoginWithUsernamePassword" FunctionName="DDNA_DBModel.Store.LoginWithUsernamePassword">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="DDNA_DBModel.LoginWithUsernamePassword_Result">
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

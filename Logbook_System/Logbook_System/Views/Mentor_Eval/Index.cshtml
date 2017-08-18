@@ -1,0 +1,148 @@
+﻿@model IEnumerable<Logbook_System.DB.Mentor_Eval>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/MyLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Relevance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Knowledge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Communication)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Teamwork)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ProblemSolving)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FinalJudgement)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Punctuality)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Manners)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Instructions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Enthusiasm)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Workload)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adaptibility)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobKnowledge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PeerTeamwork)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Assistance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Comments)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LeanerSign)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MentorSign)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mentor.Username)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Student.Username)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Relevance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Knowledge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Communication)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Teamwork)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProblemSolving)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FinalJudgement)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Punctuality)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Manners)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Instructions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Enthusiasm)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Workload)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adaptibility)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.JobKnowledge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PeerTeamwork)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Assistance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Comments)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LeanerSign)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MentorSign)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mentor.Username)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Student.Username)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
